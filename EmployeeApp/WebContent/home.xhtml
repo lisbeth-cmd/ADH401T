@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"     
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <title>TUT Employee Example</title>
+    </h:head>
+    <h:body>
+    <h2>Employee Management</h2>
+    <h:form>
+    <h:panelGrid columns="2" >
+   <h:outputLabel value="First Name : "/>
+   <h:inputText value="#{employeeController.employee.firstName}"></h:inputText>
+   <h:outputLabel value="Surname : "/>
+   <h:inputText value="#{employeeController.employee.lastName}"></h:inputText>
+   <h:outputLabel value="Salary : "/>
+   <h:inputText value="#{employeeController.employee.salary}"></h:inputText>
+       </h:panelGrid>
+       <h:commandButton value="Save"
+       action="#{employeeController.saveEmployee(employeeController.employee)}"></h:commandButton>
+    </h:form>
+    </h:body>
+</html>
